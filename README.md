@@ -1,6 +1,6 @@
 # 19CS301-Module10
 ###EX: 10.a  STACK
-### Aim: ToWrite a python programming to sort the stack using recursion
+### Aim: To Write a python programming to sort the stack using recursion
 ### Algorithm:
 STEP 1: Start.
 
@@ -48,34 +48,40 @@ print(list(A))
 
 
 ### EX: 10.2 IMPLEMENTATION OF STACK
-### Aim: To Write a python program to implement the stack using deque method for rotating the stack.
+### Aim: To Write a  python program to add only the even unique numbers using appendleft() from n given numbers.
 ### Algorithm:
 
 STEP 1: Start.
 
 STEP 2: Import collections and import deque.
 
-STEP 3: Create a list and get the input from user.
+STEP 3: Create an empty queue using deque.
 
-STEP 4: Create a variable n and get number of inputs from user.
+STEP 4: Read n numbers from input.
 
-STEP 5 : Using a loop get the inputs from user and append in deque.
+STEP 5 : For each number, check if it is even and not already in the queue.
 
-STEP 6: Using rotate function rotate the stack.
+STEP 6: If valid, insert it at the front using appendleft().
 
 STEP 7 : Print the result. 
 
 STEP 8 : Stop.
 ### Program: 
 ```
-import collections
-def fun(n):
-   stack = collections.deque([])
-   a=int(input())
-   for i in range (a):
-         x=stack.append(int(input()))
-     print(f"Stack before rotation {stack}") stack.rotate(n)
-print(f"Stack after rotation {stack}")
+from collections import deque
+class Queue:  
+  def __init__(self):  
+      self.queue = deque()  
+  def add_element(self,val):
+      if val%2==0 and val not in self.queue:  
+          self.queue.appendleft(val)  
+          return True  
+      return False  
+TheQueue = Queue()  
+n=int(input())
+for i in range(n):
+    TheQueue.add_element(int(input())) 
+print(TheQueue.queue)
 ```
 ### Output:
 ![image](https://github.com/user-attachments/assets/f42c4ec6-578c-418a-8f66-cf70abe7dc54)
