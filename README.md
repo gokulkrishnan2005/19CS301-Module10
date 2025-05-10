@@ -1,35 +1,47 @@
 # 19CS301-Module10
 ###EX: 10.a  STACK
-### Aim: To Write a python program to get the integer values from the user and push only the odd number into the stack and later pop the last 2 elements
+### Aim: ToWrite a python programming to sort the stack using recursion
 ### Algorithm:
 STEP 1: Start.
 
-STEP 2: Create a list and a variable n.
+STEP 2: Define sortStack(stack) to sort recursively by popping all elements.
 
-STEP 3: Get the value of n from user.
+STEP 3: Recursively call sortStack until the stack is empty.
 
-STEP 4: Using loop append only odd elements in the stack.
+STEP 4: Use sortedInsert(stack, key) to insert each popped element back in sorted order.
 
-STEP 5 : Using another loop using built-in pop operation pop the last two elements.
+STEP 5: In sortedInsert, if the stack is empty or key > top, push key.
 
-STEP 6: Print the result.
+STEP 6 : Else, pop top, recursively insert key, then push top back.
 
-STEP 7 : Stop.
+STEP 7: Read input, call sortStack, and print the result.
+
+STEP 8: Stop.
+
 ### Program:
 ```
-l = []
-n = int(input())
-for i in range(n):
-       x = int(input())
-       if x%2!=0:
-            l.append(x)
- print(l)
-for i in range(2):
-      l.pop()
-     print(l)
+def sortedInsert(stack, key):
+    if not stack or key > stack[-1]:
+        stack.append(key)
+        return
+    top = stack.pop()
+    sortedInsert(stack, key)
+    stack.append(top)
+def sortStack(stack):
+    if not stack:
+        return
+ 
+    top = stack.pop()
+    sortStack(stack)
+    sortedInsert(stack, top)
+
+ 
+A = eval(input())
+sortStack(A)
+print(list(A))
 ```
 ### Output:
- ![image](https://github.com/user-attachments/assets/d2ce0434-7594-41af-ba20-3d7ecf9e0d93)
+ ![image](https://github.com/gokulkrishnan2005/19CS301-Module10/blob/main/module10-1.png)
 
 ### Result: Thus, the given program is implemented and executed successfully .
  
