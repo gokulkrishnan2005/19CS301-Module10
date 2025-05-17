@@ -156,5 +156,101 @@ for i in range(4):
  
 
 ### Result: Thus, the given program is implemented and executed successfully .
+
+
+ # 19CS301-Module10
+###EX: 10.e SEB- Circular Queue
+### Aim: To Write a python program to get string values from the user and display the values using circular queue
+### Algorithm:
+### 🧠 ALGORITHM (step-by-step)
+
+**1 .  Start**
+
+**2 .  Initialize a circular queue**
+
+* Input the maximum capacity `k` (in the given code it is fixed to `5`).
+* Create an array `queue` of length `k`, filled with `None`.
+* Set both `head` and `tail` indices to `–1` to mark an empty queue.
+
+**3 .  Read the number of elements to insert**
+
+* Read an integer `n`.
+
+**4 .  Repeat steps 5–7 for each of the `n` data items**
+
+#### 5 .  Read `data`
+
+* Read one item from input.
+
+#### 6 .  **Enqueue** `data`
+
+1. **Overflow test**
+
+   * If `(tail + 1) mod k == head`, the queue is full → report *“The circular queue is full”* and skip the insertion.
+2. **First insertion (queue empty)**
+
+   * If `head == –1`, set `head = 0`, `tail = 0`, and store `data` at `queue[0]`.
+3. **Normal insertion**
+
+   * Otherwise, advance `tail = (tail + 1) mod k` and store `data` at `queue[tail]`.
+
+#### 7 .  Loop back for the next data item
+
+**8 .  **Print** the circular queue**
+
+1. If `head == –1`, output *“No element in the circular queue”* (the queue is empty).
+2. If `tail ≥ head`, the valid segment is contiguous:
+
+   * Print elements from `queue[head]` to `queue[tail]`.
+3. Otherwise the queue is wrapped:
+
+   * Print elements from `queue[head]` to `queue[k – 1]`, then from `queue[0]` to `queue[tail]`.
+
+**9 .  End**
+
+This algorithm covers initialization, safe insertion with overflow detection, and traversal-based printing for a fixed-size circular queue.
+
+
+### Program:
+```
+
+class MyCircularQueue():
+    def __init__(self, k):
+        self.k = k
+        self.queue = [None] * k
+        self.head = self.tail = -1
+    def enqueue(self, data):
+        if ((self.tail + 1) % self.k == self.head):
+            print("The circular queue is full\n")
+        elif (self.head == -1):
+            self.head = 0
+            self.tail = 0
+            self.queue[self.tail] = data
+        else:
+            self.tail = (self.tail + 1) % self.k
+            self.queue[self.tail] = data
+    def printCQueue(self):
+        if(self.head == -1):
+            print("No element in the circular queue")
+        elif (self.tail >= self.head):
+            for i in range(self.head, self.tail + 1):
+                print(self.queue[i], end=" ")
+            print()
+        else:
+            for i in range(self.head, self.k):
+                print(self.queue[i], end=" ")
+            for i in range(0, self.tail + 1):
+                print(self.queue[i], end=" ")
+            print()
+obj = MyCircularQueue(5)
+n=int(input())
+for i in range(n):
+    obj.enqueue(input())
+obj.printCQueue()
+```
+### Output:
+ ![image](https://github.com/gokulkrishnan2005/19CS301-Module10/blob/main/module10-1.png)
+
+### Result: Thus, the given program is implemented and executed successfully .
  
 
