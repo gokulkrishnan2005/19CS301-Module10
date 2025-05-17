@@ -161,8 +161,7 @@ for i in range(4):
  # 19CS301-Module10
 ###EX: 10.e SEB- Circular Queue
 ### Aim: To Write a python program to get string values from the user and display the values using circular queue
-### Algorithm:
-### 🧠 ALGORITHM (step-by-step)
+### Algorithm
 
 **1 .  Start**
 
@@ -249,7 +248,7 @@ for i in range(n):
 obj.printCQueue()
 ```
 ### Output:
- ![image](https://github.com/gokulkrishnan2005/19CS301-Module10/blob/main/module10-1.png)
+ ![image](https://github.com/gokulkrishnan2005/19CS301-Module10/blob/main/10th.png)
 
 ### Result: Thus, the given program is implemented and executed successfully .
  
