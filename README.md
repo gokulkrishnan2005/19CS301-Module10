@@ -1,6 +1,7 @@
 # 19CS301-Module10
-###EX: 10.a  STACK
-### Aim: To Write a python programming to sort the stack using recursion
+### EX: 10.a  STACK
+### Aim:
+To Write a python programming to sort the stack using recursion
 ### Algorithm:
 STEP 1: Start.
 
@@ -48,7 +49,8 @@ print(list(A))
 
 
 ### EX: 10.2 IMPLEMENTATION OF STACK
-### Aim: To Write a  python program to add only the even unique numbers using appendleft() from n given numbers.
+###
+Aim: To Write a  python program to add only the even unique numbers using appendleft() from n given numbers.
 ### Algorithm:
 
 STEP 1: Start.
@@ -91,7 +93,8 @@ print(TheQueue.queue)
 
 
 EX: 10.3 QUEUE
-### Aim: To Write a python program to implement the stack using deque method for rotating the stack.
+### Aim: 
+To Write a python program to implement the stack using deque method for rotating the stack.
 ### Algorithm:
 
 STEP 1: Start.
@@ -126,7 +129,8 @@ print(stack)
 
 
 ### EX: 10.4 IMPLEMENTATION OF QUEUE
-### Aim: To Develop a python program to get the 4 integer values from user and display the values using multiprocessing library
+### Aim:
+To Develop a python program to get the 4 integer values from user and display the values using multiprocessing library
 ### Algorithm:
 
 STEP 1: Start.
@@ -159,8 +163,9 @@ for i in range(4):
 
 
  # 19CS301-Module10
-###EX: 10.e SEB- Circular Queue
-### Aim: To Write a python program to get string values from the user and display the values using circular queue
+### EX: 10.e SEB- Circular Queue
+### Aim:
+To Write a python program to get string values from the user and display the values using circular queue
 ### Algorithm
 
 **1 .  Start**
